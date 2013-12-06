@@ -1,0 +1,27 @@
+{
+    "name": "xontent",
+    "title": "Xontent",
+    "description": "HTML templates - capture children or siblings into a document fragment and get it back later.",
+    "keywords": [
+        "template",
+        "content",
+        "siblings"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Herbert Vojčík",
+        "email": "herby@mailbox.sk"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/herby/xontent/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/herby/xontent/issues",
+    "homepage": "https://github.com/herby/xontent",
+    "docs": "https://github.com/herby/xontent",
+    "dependencies": {
+        "jquery": ">=1.4.3"
+    }
+}
