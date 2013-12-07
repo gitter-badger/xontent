@@ -39,7 +39,7 @@ Advanced use
 
 Beyond polyfilling template tag (and allowing its functionality
 to any tag), Xontent allows specifying what content should
-`#el,xontent()` grab and remember and subsequenty, return.
+`$el.xontent()` grab and remember and subsequenty, return.
 By default, it is the contents / .content, but you can use
 `data-xontent` attribute to specify a few more options:
 
