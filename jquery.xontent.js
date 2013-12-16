@@ -12,11 +12,11 @@
                 arg = arg.get(0);
             }
             if (arg instanceof DocumentFragment) {
-                $(this).data('xontent', arg);
+                this.data('xontent', arg);
             }
         }
 
-        return $(this);
+        return this;
     };
 
     function xontent(el) {
