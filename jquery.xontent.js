@@ -30,7 +30,7 @@
         content = el.content;
         if (content instanceof DocumentFragment) {
             // template tag or something that behaves similarly
-            $el.data('xontent', $(content));
+            $el.xontent('set', content);
             return xontent(el);
         }
 
@@ -61,7 +61,7 @@
             child = next;
         }
 
-        $(el).data('xontent', $(fragment));
+        $(el).xontent('set', fragment);
         return xontent(el);
     }
 
