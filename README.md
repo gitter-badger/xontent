@@ -54,3 +54,11 @@ By default, it is the contents / .content, but you can use
  	the end of parent element are grabbed;
  - Any other form of `data-xontent` uses the default
  	(take the contents or `.content` in case of `<template>`).
+
+Setting xontent (new in 0.1.0)
+----
+
+You can call `$('#foo').xontent('set', payload)` to set the payload
+which `$('#foo').xontent()` will return.
+The payload may be a _DocumentFragment_ itself,
+or a jQuery object that encapsulates it.
