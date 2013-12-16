@@ -9,9 +9,10 @@
 
         if (op === "set") {
             if (arg instanceof $) {
+                arg = arg.get(0);
+            }
+            if (arg instanceof DocumentFragment) {
                 $(this).data('xontent', arg);
-            } else if (arg instanceof DocumentFragment) {
-                $(this).data('xontent', $(arg));
             }
         }
 
@@ -22,9 +23,9 @@
         var $el = $(el), data, content, match;
 
         data = $el.data('xontent');
-        if (data instanceof $) {
+        if (data instanceof DocumentFragment) {
             // already set
-            return data;
+            return $(data);
         }
 
         content = el.content;
