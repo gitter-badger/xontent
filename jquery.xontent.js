@@ -1,9 +1,21 @@
 (function ($) {
 
-    $.fn.xontent = function () {
-        return this.map(function (index, el) {
-            return xontent(el).toArray();
-        });
+    $.fn.xontent = function (op, arg) {
+        if (!op) {
+            return this.map(function (index, el) {
+                return xontent(el).toArray();
+            });
+        }
+
+        if (op === "set") {
+            if (arg instanceof $) {
+                $(this).data('xontent', arg);
+            } else if (arg instanceof DocumentFragment) {
+                $(this).data('xontent', $(arg));
+            }
+        }
+
+        return $(this);
     };
 
     function xontent(el) {
