@@ -33,17 +33,16 @@
             // if sentinel is not present, go until end of parent
             match = data.match(/^until (.*)$/);
             if (match) {
-                return xontentInterval(el, el, $el.nextAll(match[1]).get(0));
+                return xontentInterval(el, el.nextSibling, $el.nextAll(match[1]).get(0));
             }
         }
 
         // my contents
-        return xontentInterval(el, null, null);
+        return xontentInterval(el, el.firstChild, null);
     }
 
     function xontentInterval(el, child, stop) {
         var fragment = document.createDocumentFragment();
-        child = child ? child.nextSibling : el.firstChild;
         while (child != stop) {
             var next = child.nextSibling;
             fragment.appendChild(child);
