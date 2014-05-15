@@ -62,3 +62,9 @@ You can call `$('#foo').xontent('set', payload)` to set the payload
 which `$('#foo').xontent()` will return.
 The payload may be a _DocumentFragment_ itself,
 or a jQuery object that encapsulates it.
+
+AMD (new in 0.1.2)
+----
+
+You can load xontent with AMD loader such as requirejs.
+If loaded via AMD, xontent installs itself to AMD-loaded jQuery.

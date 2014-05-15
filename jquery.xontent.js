@@ -1,4 +1,13 @@
-(function ($) {
+;
+(function (factory) {
+    if (typeof define === "function" && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof jQuery !== "undefined") {
+        factory(jQuery);
+    } else {
+        throw new Error("xontent panic: jQuery not found");
+    }
+})(function ($) {
 
     $.fn.xontent = function (op, arg) {
         if (!op) {
@@ -66,4 +75,4 @@
         return xontent(el);
     }
 
-}(jQuery));
+});
